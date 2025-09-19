@@ -8,6 +8,7 @@ import strategiesRouter from './routes/strategies';
 import youtubeRouter from './routes/youtube';
 import backtestRouter from './routes/backtest';
 import exportRouter from './routes/export';
+import knowledgeRouter from './routes/knowledge';
 
 dotenv.config();
 
@@ -22,6 +23,7 @@ app.use('/strategies', strategiesRouter);
 app.use('/youtube', youtubeRouter);
 app.use('/backtest', backtestRouter);
 app.use('/export', exportRouter);
+app.use('/knowledge', knowledgeRouter);
 
 app.get('/', (_req: Request, res: Response) => {
   res.json({ name: 'TrainFlow Backend', status: 'ok' });
